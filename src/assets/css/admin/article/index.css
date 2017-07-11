@@ -1,0 +1,7 @@
+.admin-article{
+    
+}
+.admin-article .el-input, .el-input__inner{
+    width: initial !important;
+    margin-left:5px;
+}

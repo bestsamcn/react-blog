@@ -1,0 +1,25 @@
+.menu{
+    position: fixed;
+    left:0;
+    top:49px;
+    width:100%;
+    height:100%;
+    padding:30px 10px;
+    background:#fff;
+    z-index: 1001;
+}
+.menu a{
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    color:#333;
+    font-size: 14px;
+    display: block;
+}
+.menu a.active{
+    color:#1ABC9C;
+}
+.menu a:before{
+    margin-right: 5px;
+}
