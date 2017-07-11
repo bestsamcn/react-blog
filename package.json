@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "build":"webpack --config ./conf/webpack.prod.conf.js",
     "dev": "webpack-dev-server --config ./conf/webpack.config.js --host 10.28.5.197 --inline --hot --history-api-fallback --content-base ."
   },
   "devDependencies": {
