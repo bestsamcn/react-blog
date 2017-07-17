@@ -1,13 +1,13 @@
-# React-Blog
+# Best-Blog
 
 ## 简介
-React-Blog 是一个基于``React+express``的前后端分离的响应式web项目,有[vue](https://github.com/bestsamcn/vue-blog)和[react](https://github.com/bestsamcn/react-blog)两个版本。
+Best-Blog 是一个基于``React+express``的前后端分离的响应式web项目,另有[Vue版本](https://github.com/bestsamcn/vue-blog)。
 - 前端使用了React全家桶完成，包括了``react + react-router + axios + react-redux + element-react``;
 - 后端接口利用 ``express + mongodb + redis`` 开发，后端地址[请点我](https://github.com/bestsamcn/node-blog)
 
 ## 环境
-- node v4.4.5
-- npm  v4.3.0
+- node v6
+- npm  v4
 - react  v15.6.1
 
 ## 开发
@@ -19,6 +19,8 @@ cd react-blog
 npm install
 
 npm run dev
+
+npm run build
 ```
 ## 图片
 ![piture](https://github.com/bestsamcn/vue-blog/blob/master/picture/%E6%9C%AA%E6%A0%87%E9%A2%98-1.png)
