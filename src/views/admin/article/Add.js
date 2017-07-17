@@ -102,7 +102,7 @@ class AdminAddArticle extends React.Component{
 	            highlightHtml:''
         	});
         	that.state.smde.codemirror.setValue('');
-            // this.setArticleState(true); 
+            // this.setArticleState(true);
         });
 	}
 	posterChange(e){

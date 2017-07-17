@@ -1,5 +1,5 @@
 import React from 'react';
-import { Radio, Table, Button, Tag, Pagination, Input, MessageBox } from 'element-react';
+import { Radio, Table, Button,  Pagination, Input, MessageBox } from 'element-react';
 import { PAGE_SIZE } from '../../../api/config';
 import Helper from '../../../utils/helper';
 import * as API from '../../../api';

@@ -1,8 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
-var HtmlWebpackPlugin = require('html-withimg-loader');
 process.env.NODE_ENV = '"development"';
-
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 function resolve(dir) {
     return path.join(__dirname, '..', dir)
 }
@@ -10,7 +9,7 @@ module.exports = {
     entry: './src/main.js',
     output: {
         filename: 'bundle.js',
-        publicPath: '/assets/'
+        publicPath: '/'
     },
     resolve: {
         alias: {
@@ -42,9 +41,6 @@ module.exports = {
         }, {
             test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: "file-loader"
-        }, {
-            test: /\.(htm|html)$/i,
-            loader: 'html-withimg-loader'
         }]
     },
 
@@ -55,6 +51,11 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({
             'process.env': process.env.NODE_ENV
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'index.html',
+          template: 'index.html',
+          inject: true
         })
     ]
 }

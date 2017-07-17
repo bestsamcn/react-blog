@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build":"webpack --config ./conf/webpack.prod.conf.js",
+    "build": "webpack --config ./conf/webpack.prod.conf.js",
     "dev": "webpack-dev-server --config ./conf/webpack.config.js --host 10.28.5.197 --inline --hot --history-api-fallback --content-base ."
   },
   "devDependencies": {
@@ -12,11 +12,15 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "classnames": "^2.2.5",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.11.2",
     "fs": "0.0.1-security",
     "highlight.js": "^9.12.0",
+    "html-webpack-plugin": "^2.29.0",
     "html-withimg-loader": "^0.1.16",
+    "optimize-css-assets-webpack-plugin": "^2.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
@@ -27,6 +31,7 @@
     "redux": "^3.7.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "webpack": "^1.15.0",

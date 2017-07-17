@@ -18,7 +18,7 @@ class Smde extends React.Component{
                 },
                 renderingConfig: {
                     codeSyntaxHighlighting: true, // 开启代码高亮
-                    highlightingTheme: 'atom-one-dark' 
+                    highlightingTheme: 'atom-one-dark'
                 },
                 toolbar: ["bold", "italic", "heading", "|", "code", "quote", "unordered-list", "ordered-list", "|", "link", "image", "preview", "|", "side-by-side", "fullscreen", "guide"],
                 inputStyle:'contenteditable'
@@ -39,7 +39,7 @@ class Smde extends React.Component{
       if (this.state.configs.renderingConfig && this.state.configs.renderingConfig.codeSyntaxHighlighting) {
         require.ensure([], () => {
           const theme = this.state.configs.renderingConfig.highlightingTheme || 'default';
-          window.hljs = require('highlight.js');
+          // window.hljs = require('highlight.js');
           require(`highlight.js/styles/${theme}.css`);
         }, 'highlight');
       }
