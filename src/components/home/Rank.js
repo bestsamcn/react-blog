@@ -106,7 +106,7 @@ class Rank extends React.Component{
                                     </div>
                                     <div className="text">
                                         <h4>{item.title}</h4>
-                                        <p><i className="icon-calendar"></i>{Helper.dateFormat(item.createTime, 'yyyy-MM-dd')}</p>
+                                        <p><i className="icon-edit"></i>{Helper.dateFormat((item.lastEditTime ? item.lastEditTime : item.createTime), 'yyyy-MM-dd')}</p>
                                     </div>
                                 </Link>
                             ))
