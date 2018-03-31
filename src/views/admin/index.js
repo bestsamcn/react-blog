@@ -1,6 +1,5 @@
 import React from 'react';
 import { browserHistory } from 'react-router';
-import { setBreadCrumb } from '../../store/actions';
 import * as API from '../../api';
 import '../../assets/css/admin/home/index.css';
 

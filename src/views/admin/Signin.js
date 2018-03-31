@@ -1,5 +1,5 @@
 import React from 'react';
-import { setToast, setLogin, setToken } from '../../store/actions';
+import * as ACT from '../../store/actions';
 import { connect } from 'react-redux';
 import * as API from '../../api';
 import { browserHistory  } from 'react-router';
@@ -69,9 +69,9 @@ const mapStateProps = state=>{
 }
 const mapDispatchProps = (dispatch)=>{
     return{
-        setToast:(msg)=>dispatch(setToast(msg)),
-        setLogin:(bool)=>dispatch(setLogin(bool)),
-        setToken:(token)=>dispatch(setToken(token))
+        setToast:(msg)=>dispatch(ACT.common.setToast(msg)),
+        setLogin:(bool)=>dispatch(ACT.common.setLogin(bool)),
+        setToken:(token)=>dispatch(ACT.common.setToken(token))
     }
 }
 

@@ -18,7 +18,8 @@ class Rank extends React.Component{
             pageSize:4,
             hotList:[],
             commentList:[],
-            readNumList:[]
+            readNumList:[],
+            latestList:[]
         }
     }
     navClick(i){
@@ -45,7 +46,7 @@ class Rank extends React.Component{
             this.setState({commentList:res.data});
         });
     }
-    getReadNumAritlce(){
+    getReadNumArticle(){
         var obj = {
             type:2,
             pageIndex:this.state.pageIndex,
@@ -55,18 +56,29 @@ class Rank extends React.Component{
             this.setState({readNumList: res.data});
         });
     }
+    getLatestArticle(){
+        var obj = {
+            type:3,
+            pageIndex:this.state.pageIndex,
+            pageSize:this.state.pageSize
+        }
+        API.getArticleList(obj).then(res=>{
+            this.setState({latestList: res.data});
+        });
+    }
     componentWillMount() {
         this.getHotList();
         this.getLatestComent();
-        this.getReadNumAritlce();
+        this.getReadNumArticle();
+        this.getLatestArticle();
     }
     render(){
         return (
 
             <div className="moveup article-rank margin-top-30">
                 <div className="tab-list">
-                    <a href="javascript:;" className={this.state.activeIndex === 1 && 'active'} onClick={()=>this.navClick(1)}>最火</a>
-                    <a href="javascript:;" className={this.state.activeIndex === 2 && 'active'} onClick={()=>this.navClick(2)}>最新</a>
+                    <a href="javascript:;" className={this.state.activeIndex === 1 && 'active'} onClick={()=>this.navClick(1)}>最新</a>
+                    <a href="javascript:;" className={this.state.activeIndex === 2 && 'active'} onClick={()=>this.navClick(2)}>最火</a>
                     <a href="javascript:;" className={this.state.activeIndex === 3 && 'active'} onClick={()=>this.navClick(3)}>评论</a>
                     <a href="javascript:;" className={this.state.activeIndex === 4 && 'active'} onClick={()=>this.navClick(4)}>阅读</a>
                 </div>
@@ -84,11 +96,10 @@ class Rank extends React.Component{
                     {
                     this.state.activeIndex === 1 && <div className="animated popular">
                         {
-                            this.state.hotList.map(item=>(
+                            this.state.latestList.map(item=>(
                                 <Link to={`/article/detail/${item._id}`} key={item._id}>
                                     <div className="img">
                                         <div className="img-box">
-
                                             {!!item.poster && <img  src={`${CONFIG.POSTER_URL}/${item.poster}`} />}
                                             {!item.poster && <span>{Helper.textEllipsis(item.title,2,true)}</span>}
                                         </div>
@@ -116,10 +127,11 @@ class Rank extends React.Component{
                     {
                     this.state.activeIndex === 2 && <div className="animated popular">
                         {
-                            this.props.latestList.map(item=>(
+                            this.state.hotList.map(item=>(
                                 <Link to={`/article/detail/${item._id}`} key={item._id}>
                                     <div className="img">
                                         <div className="img-box">
+
                                             {!!item.poster && <img  src={`${CONFIG.POSTER_URL}/${item.poster}`} />}
                                             {!item.poster && <span>{Helper.textEllipsis(item.title,2,true)}</span>}
                                         </div>

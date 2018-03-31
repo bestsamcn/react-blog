@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build": "webpack --config ./conf/webpack.prod.conf.js",
-    "dev": "webpack-dev-server --config ./conf/webpack.config.js --host 10.28.5.197 --inline --hot --history-api-fallback --content-base ."
+    "build": "webpack --config ./conf/webpack.prod.conf.js --progress",
+    "dev": "webpack-dev-server --config ./conf/webpack.config.js --host localhost --inline --hot --history-api-fallback --content-base ."
   },
   "devDependencies": {
     "axios": "^0.16.2",
