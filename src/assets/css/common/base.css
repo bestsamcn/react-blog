@@ -303,6 +303,9 @@ html, body, #app{
     // overflow-y: scroll;
     overflow-x: hidden;
 }
+.app-router-view{
+    padding-top:0 !important;
+}
 
 .moveup{
     animation:moveup 1s ease-in-out ;

@@ -13,7 +13,7 @@
 .article-detail .main .title h4{
     font-size: 20px;
     text-align: left;
-    margin:10px 0;
+    margin:10px 0 0 0;
     margin-top:0;
 }
 .article-detail .main .title .tags{
@@ -21,7 +21,7 @@
 }
 .article-detail .main .title .info{
     overflow: hidden;
-    margin:10px 0;
+    margin:10px 0 10px 0;
 }
 .article-detail .main .title .info span{
     float: left;
@@ -118,5 +118,17 @@
     }
     .article-detail .main .title h4{
         font-size: 22px;
+    }
+}
+@media screen and (max-width:768px){
+    .article-detail .main .title .info span {
+        float: left;
+        margin-right: 20px;
+        color: #bbb;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .article-detail .main .title .info{
+        margin-top:0;
     }
 }

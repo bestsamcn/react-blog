@@ -266,8 +266,10 @@ class Comment extends React.Component{
 			            ))
 		           	}
 		        </div>
-		        {!this.state.isMore && <p className="text-center margin-top-10 color-gray">没有更多了...</p>}
-		        {this.state.isMore && <a href="javascript:;" onClick={this.getList.bind(this, false)} className="more-btn md-hide">More</a>}
+		        <div style={{padding:'20px 0'}}>
+		        	{!this.state.isMore && <p className="text-center margin-top-10 padding-bottom-20 margin-bottom-20 color-gray">没有更多了...</p>}
+		        	{this.state.isMore && <a href="javascript:;" onClick={this.getList.bind(this, false)} className="more-btn md-hide">More</a>}
+		        </div>
 		    </div>
 		)
 	}

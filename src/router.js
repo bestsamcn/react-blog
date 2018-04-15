@@ -34,6 +34,11 @@ const App = (location, cb) => {
         cb(null, require('./App').default)
     },'App')
 }
+const Webview = (location, cb) => {
+    require.ensure([], require => {
+        cb(null, require('./Webview').default)
+    },'Webview')
+}
 const Home = (location, cb) => {
     require.ensure([], require => {
         cb(null, require('./views/Home').default)
@@ -64,7 +69,11 @@ const ArticleDetail = (location, cb) => {
         cb(null, require('./views/article/detail').default)
     },'ArticleDetail')
 }
-
+const WebArticleDetail = (location, cb) => {
+    require.ensure([], require => {
+        cb(null, require('./views/web/detail').default)
+    },'WebArticleDetail')
+}
 
 const Admin = (location, cb) => {
     require.ensure([], require => {
@@ -199,7 +208,7 @@ let changeRoute = (nextState, replace, next)=>{
 
 const router = (
     <div>
-        <Router history={browserHistory}>
+        <Router history={hashHistory}>
             <Route path="/" getComponent={App}>
                 <IndexRoute title="首页" getComponent={Home} />
                 <Route path="/" title="首页" getComponent={Home} />
@@ -225,6 +234,9 @@ const router = (
                         <Route path="article/edit/:id" title="编辑文章"  getComponent={AdminEditArticle} />
                     </Route>
                 </Route>
+            </Route>
+            <Route path="/app" getComponent={Webview}>
+                <Route path="article/:id" title="文章详情" getComponent={WebArticleDetail} />
             </Route>
         </Router>
     </div>
