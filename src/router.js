@@ -74,6 +74,11 @@ const WebArticleDetail = (location, cb) => {
         cb(null, require('./views/web/detail').default)
     },'WebArticleDetail')
 }
+const WebInformation = (location, cb) => {
+    require.ensure([], require => {
+        cb(null, require('./views/web/information').default)
+    },'WebInformation')
+}
 
 const Admin = (location, cb) => {
     require.ensure([], require => {
@@ -237,6 +242,7 @@ const router = (
             </Route>
             <Route path="/app" getComponent={Webview}>
                 <Route path="article/:id" title="文章详情" getComponent={WebArticleDetail} />
+                <Route path="information" title="文章详情" getComponent={WebInformation} />
             </Route>
         </Router>
     </div>
