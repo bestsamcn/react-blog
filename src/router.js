@@ -213,7 +213,7 @@ let changeRoute = (nextState, replace, next)=>{
 
 const router = (
     <div>
-        <Router history={hashHistory}>
+        <Router history={browserHistory}>
             <Route path="/" getComponent={App}>
                 <IndexRoute title="首页" getComponent={Home} />
                 <Route path="/" title="首页" getComponent={Home} />

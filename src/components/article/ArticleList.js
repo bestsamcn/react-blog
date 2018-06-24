@@ -22,9 +22,9 @@ const ArticleList = ({articleList, isMore, isShowMore=true, isMobile, onLoadMore
         }
     }
     let goUrl = url=>{
-        console.log(hashHistory, 'ffffffff');
+        // console.log(hashHistory, 'ffffffff');
         // return;
-        hashHistory.push(url);
+        browserHistory.push(url);
     }
     return (
         <div className="article-list" >

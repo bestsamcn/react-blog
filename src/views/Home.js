@@ -74,7 +74,7 @@ class Home extends React.Component {
     }
     scrollBar(){
         if(this.props.isMobile) return;
-        var _body = document.body;
+        var _body = document.documentElement;
         var el = this.refs.scrollBar;
         var _pNode = el.parentNode;
 
