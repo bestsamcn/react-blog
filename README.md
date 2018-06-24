@@ -1,7 +1,7 @@
 # React-Blog
 
 ## 简介
-React-Blog 是一个基于``React+express``的前后端分离的响应式web项目,另有[Vue版本](https://github.com/bestsamcn/vue-blog)和[Angualr版本](https://github.com/bestsamcn/angular-blog)。
+React-Blog 是一个基于``React+express``的前后端分离的响应式web项目,另有[Gulp版本](https://github.com/bestsamcn/gulp-blog), [Vue版本](https://github.com/bestsamcn/vue-blog)和[Angualr版本](https://github.com/bestsamcn/angular-blog)。
 - 前端使用了React全家桶完成，包括了``react + react-router + axios + react-redux + element-react``;
 - 后端接口利用 ``express + mongodb + redis`` 开发，后端地址[请点我](https://github.com/bestsamcn/node-blog)
 
